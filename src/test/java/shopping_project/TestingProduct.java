@@ -35,7 +35,7 @@ public class TestingProduct {
 	
 	@Test
 	public void testProductDetails() throws BusinessException {
-		//Product product=new Product();
+		
 		CustomerSearchService customerSearchService = new CustomerSearchServiceImpl();
 		Product product=new Product();
 		assertNotNull(customerSearchService.getProductAllDetails(product));
@@ -43,24 +43,25 @@ public class TestingProduct {
 		
 	@Test
 	public void testCustomerDetails() throws BusinessException {
-		//Product product=new Product();
+		
 		CustomerSearchService customerSearchService = new CustomerSearchServiceImpl();
 		Customer customer=new Customer();
 		assertNotNull(customerSearchService.getAllCustomerDetails(customer));
 	}
 	
-	/*@Test
+/*	@Test
 	public void testAddProduct() throws BusinessException {
 		
 		CustomerSearchService customerSearchService = new CustomerSearchServiceImpl();
-		assertEquals(104,Book,500,));
-	}
+		Product product=new Product(122,"Book",500.20,"Russia");
+		assertEquals(1,customerSearchService,addproduct(roduct));
+	}*/
 	
 	@Test
 	public void testDeleteProduct() throws BusinessException {
 		
 		CustomerSearchService customerSearchService = new CustomerSearchServiceImpl();
-		assertNotNull(customerSearchService.getProductByName("Laptop"));
+		assertNotNull(customerSearchService.deleteProductById(103));
 	}
-	*/
+	
 }
