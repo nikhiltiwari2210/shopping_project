@@ -18,6 +18,6 @@ public interface CustomerSearchService {
 	 public List<Product>getProductAllDetails(Product product) throws BusinessException;
 	 
 	 public int addproduct(Product product) throws BusinessException;
-	 public int deleteproduct(Product product) throws BusinessException;
+	 public int deleteProductById(int p_id) throws BusinessException;
 	 public List<Customer> getAllCustomerDetails(Customer customer) throws BusinessException;
 }

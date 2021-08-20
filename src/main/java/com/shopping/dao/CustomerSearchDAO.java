@@ -25,6 +25,6 @@ public interface CustomerSearchDAO {
 	public List<Product>getProductAllDetails(Product product) throws BusinessException;
 
 	public int addproduct(Product product) throws BusinessException;
-	public int deleteproduct(Product product) throws BusinessException;
+	public int deleteProductById(int pidd) throws BusinessException;
 	public List<Customer> getAllCustomerDetails(Customer customer) throws BusinessException;
 }

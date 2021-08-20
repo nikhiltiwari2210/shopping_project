@@ -204,9 +204,18 @@ public class CustomerSearchDAOImpl  implements CustomerSearchDAO{
 	}
 
 	@Override
-	public int deleteproduct(Product product) throws BusinessException {
-		// TODO Auto-generated method stub
-		return 0;
+	public int deleteProductById(int p_id) throws BusinessException {
+		int c=0;	
+		try(Connection connection=MySqlDbConnection.getConnection()) {
+			String sql="Delete from shopping_project.product where p_id=?";
+			PreparedStatement preparedStatement=connection.prepareStatement(sql);
+			preparedStatement.setInt(1,p_id);
+			c=preparedStatement.executeUpdate();
+		}catch(ClassNotFoundException | SQLException e) {
+				log.warn(e);
+				throw new BusinessException("Internal Errored Occured");
+			}
+			return c;
 	}
 
 	@Override
@@ -231,5 +240,6 @@ public class CustomerSearchDAOImpl  implements CustomerSearchDAO{
 		}
 		return customers;
 	}
+	
 }
 	

@@ -96,7 +96,18 @@ public class MainShopping {
 						break;
 					case 2:
 						log.info(".....Delete the Product Details.....");
-
+						 log.info("Enter Product Id");
+						 int p_id=Integer.parseInt(scanner.nextLine());
+						 try {
+							 CustomerSearchService customerSearchServices = new CustomerSearchServiceImpl();
+							 customerSearchServices.deleteProductById(p_id);
+							 log.info("Product with "+p_id+" Deleted Successfully ");
+						    }catch(NumberFormatException e) {
+							 log.warn("Product Id should be digit only... Try Again");
+							} catch (BusinessException e) {
+								log.warn(e.getMessage());
+							}
+						 
 						break;
 					case 3:
 						log.info(".....Here the details of all the Customers.....");

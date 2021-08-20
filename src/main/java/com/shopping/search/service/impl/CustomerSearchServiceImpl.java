@@ -79,7 +79,7 @@ public class CustomerSearchServiceImpl implements CustomerSearchService {
 
 	@Override
 	public int addproduct(Product product) throws BusinessException {
-		
+		//int p=0;
 		try {
 			if(customerSearchDAO.addproduct(product)==1) {
 				log.info(product);
@@ -92,8 +92,15 @@ public class CustomerSearchServiceImpl implements CustomerSearchService {
 	}
 
 	@Override
-	public int deleteproduct(Product product) throws BusinessException {
-		// TODO Auto-generated method stub
+	public int deleteProductById(int p_id) throws BusinessException {
+		try {
+			if(customerSearchDAO.deleteProductById(p_id)==1) {
+				log.info(p_id);
+			}
+		}catch(BusinessException e) {
+			log.error(e);
+			throw new BusinessException("Internal error occured, please contact admin");
+		}
 		return 0;
 	}
 
