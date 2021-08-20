@@ -1,7 +1,6 @@
 package com.shopping.model;
 
 public class Customer {
-	private int customer_id;
 	private String customer_email;
 	private String customer_firstname;
 	private String customer_lastname;
@@ -9,14 +8,6 @@ public class Customer {
 	
 	public Customer() {
 		// TODO Auto-generated constructor stub
-	}
-
-	public int getCustomer_id() {
-		return customer_id;
-	}
-
-	public void setCustomer_id(int customer_id) {
-		this.customer_id = customer_id;
 	}
 
 	public String getCustomer_email() {
@@ -52,23 +43,20 @@ public class Customer {
 	}
 
 	
-
 	@Override
 	public String toString() {
-		return "Customer [customer_id=" + customer_id + ", customer_email=" + customer_email + ", customer_firstname="
-				+ customer_firstname + ", customer_lastname=" + customer_lastname + ", customer_password="
-				+ customer_password + "]";
+		return "\n[customer_email=" + customer_email + ", customer_firstname=" + customer_firstname
+				+ ", customer_lastname=" + customer_lastname + ", customer_password=" + customer_password + "]";
 	}
 
-	public Customer(int customer_id, String customer_email, String customer_firstname, String customer_lastname,
+	public Customer(String customer_email, String customer_firstname, String customer_lastname,
 			String customer_password) {
 		super();
-		this.customer_id = customer_id;
 		this.customer_email = customer_email;
 		this.customer_firstname = customer_firstname;
 		this.customer_lastname = customer_lastname;
 		this.customer_password = customer_password;
-	}
+	}	
 	
 	
 }
