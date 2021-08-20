@@ -193,7 +193,7 @@ public class CustomerSearchDAOImpl  implements CustomerSearchDAO{
 			preparedStatement.setInt(1,product.getP_id());
 			preparedStatement.setString(2,product.getP_name());
 			preparedStatement.setDouble(3,product.getP_price());
-			preparedStatement.setString(4, product.getP_manufacture());
+			preparedStatement.setString(4,product.getP_manufacture());
 			
 			n=preparedStatement.executeUpdate();
 		}catch(ClassNotFoundException | SQLException e) {

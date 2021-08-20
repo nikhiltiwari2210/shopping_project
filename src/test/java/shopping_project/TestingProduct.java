@@ -1,5 +1,6 @@
 package shopping_project;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import org.junit.jupiter.api.Test;
@@ -49,13 +50,13 @@ public class TestingProduct {
 		assertNotNull(customerSearchService.getAllCustomerDetails(customer));
 	}
 	
-/*	@Test
+	@Test
 	public void testAddProduct() throws BusinessException {
 		
 		CustomerSearchService customerSearchService = new CustomerSearchServiceImpl();
-		Product product=new Product(122,"Book",500.20,"Russia");
-		assertEquals(1,customerSearchService,addproduct(roduct));
-	}*/
+		Product product1=new Product(112,"Pencil",50.20,"India");
+		assertEquals(1,customerSearchService.addproduct(product1));
+	}
 	
 	@Test
 	public void testDeleteProduct() throws BusinessException {
